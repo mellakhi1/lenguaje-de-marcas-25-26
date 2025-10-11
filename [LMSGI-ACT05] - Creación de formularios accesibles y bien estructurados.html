@@ -10,31 +10,117 @@
     <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
 
     <style>
-        header {
-            color: antiquewhite;
-        }
-        .header {
-            color:red;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
         .titulo {
             color: antiquewhite;
             font-family: "BBH Sans Bartle", sans-serif;
             font-weight: 100;
             font-style: normal;
         }
-        .body {
-            display:"flex;flex-direction: column;align-content: center;"
+
+        form {
+            /* Centrar el formulario en la página */
+            margin: 0 auto;
+            width: 400px;
+            /* Esquema del formulario */
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        form li+li {
+            margin-top: 1em;
+        }
+
+        label {
+            /* Tamaño y alineación uniforme */
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+
+        input,
+        textarea {
+            /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+        Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+            font: 1em sans-serif;
+
+            /* Tamaño uniforme del campo de texto */
+            width: 300px;
+            box-sizing: border-box;
+
+            /* Hacer coincidir los bordes del campo del formulario */
+            border: 1px solid #999;
+        }
+
+        input:focus,
+        textarea:focus {
+            /* Destacado adicional para elementos que tienen el cursor */
+            border-color: #000;
+        }
+
+        textarea {
+            /* Alinear los campos de texto multilínea con sus etiquetas */
+            vertical-align: top;
+
+            /* Proporcionar espacio para escribir texto */
+            height: 5em;
+        }
+
+        .button {
+            /* Alinear los botones con los campos de texto */
+            padding-left: 90px;
+            /* mismo tamaño que los elementos de la etiqueta */
+        }
+
+        button {
+            /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+        entre las etiquetas y sus campos de texto */
+            margin-left: 0.5em;
         }
     </style>
 </head>
 
 <body style="background: linear-gradient(135deg, #6a11cb, #2575fc);">
-    <header style="color:white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;" ;><b>MOTOCASION</b>
-        
+
+    <header class="hola titulo" style="color:white;" ;><b>MOTOCASION</b>
+
         <h1 class="hola titulo">LAS MEJORES MOTOS A PRECIOS INCREIBLES</h1>
-        
+
     </header>
+
+    <div class="body" style="display:flex;flex-direction: column;align-content: center;">
+    <form action="/formularios.de.mi.tienda.de.motos" method="post"></form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" style="width: 200px"><br><br>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required style="width: 250px"><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+            style="width: 250px;">
+        <small>Formato: 123-456-7890</small><br><br>
+
+        <label for="modelo">Modelo de Moto:</label>
+        <select id="modelo" name="modelo" required style="width: 200px">
+            <option value="">Seleccione un modelo</option>
+            <option value="yamaha">Yamaha</option>
+            <option value="honda">Honda</option>
+            <option value="suzuki">Suzuki</option>
+            <option value="kawasaki">Kawasaki</option>
+        </select><br><br>
+
+        <label for="mensaje">Mensaje Adicional:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="50" style="width: 300px"></textarea><br><br>
+
+        <input type="submit" value="Enviar" style="width: 150px;">
+    </div> </form>
 
 </body>
 
