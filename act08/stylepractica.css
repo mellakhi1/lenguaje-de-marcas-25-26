@@ -1,0 +1,88 @@
+/* 🎵 Estilo general */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    /* ajusta el tamaño */
+    height: auto;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #f8f8f8, #eaeaea);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 🎧 Cabecera */
+header {
+    padding: 30px 0 10px;
+    text-align: center;
+}
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header h1 {
+    color: #ff6f61;
+    font-size: 2rem;
+    margin: 0;
+}
+/*Clase*/
+.search-bar {
+    margin-top: 15px;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    width: 250px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+/*Pseudo-clase*/
+.search-bar:hover {
+    border-color: hsl(0, 0%, 23%);
+}
+#class:texto {
+    justify-content: center;
+}
+/*Combinadores*/
+div > p { background-color: lightgray; }
+.buscar-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.buscar-button:hover {
+    background-color: #ff4c3b;
+}
+/*Elemento*/
+p {
+    background-color: #ddd;
+    color: hsl(5, 93%, 36%);
+    margin-bottom: 12px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px 25px;
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: bold;
+}
+/* Efecto zoom */
+p:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}   

@@ -1,0 +1,40 @@
+p {
+    color: blue;
+}
+
+.texto {
+    color: green;
+}
+
+#parrafo1 {
+    color: red;
+}
+
+/*Efecto cambio de color al pasar el ratón sobre el párrafo*/
+p:hover {
+    color: purple;
+}
+
+/*Aplica a todos los párrafos que son hijos directos de un div*/
+div>p {
+    background-color: lightgray;
+}
+/*6*/
+body > p:first-of-type {
+    color: red;
+    text-align: center;
+}
+/*6*/
+div p{
+    color: yellow !important;
+}
+/*6*/
+p:hover {
+    color: orange !important;
+}
+#parrafo1 {
+    color: brown;
+}
+/*La regla que prevalece ahora es .texto { color: pink !important; } para todos los párrafos con la clase "texto",
+ ya que !important anula cualquier otra regla (color en este caso), incluso las de ID # o :hover; los párrafos sin esa clase 
+ siguen la regla normal de p { color: blue; }, cambiando a púrpura al pasar el ratón por p:hover.*/

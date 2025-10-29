@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.4;
+    color: #111;
+    background-color: #f7f7f8;
+}
+
+header {
+    background: linear-gradient(135deg #ffe4c4, #ffcc80);
+    color: #043;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 20px 10px;
+    gap: 10px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: .4rem .8rem;
+    background: #ffffffcc;
+    color: #043;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.site-nav a:hover {
+    background-color: #ffd580;
+    transform: scale(1.05);
+}
+
+header,
+main,
+aside,
+section {
+    border-radius: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    text-align: justify;
+    width: 100%;
+    color: #333;
+}
+
+main p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+aside {
+    background-color: #e0fff0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+aside h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #043;
+}
+
+aside a {
+    color: #043;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+p {
+    text-align: justify;
+}
+
+footer {
+    background-color: #043;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    border-radius: 0 0 20px 20px;
+    margin-top: auto;
+}
+
+/* MEDIA QUERIES - Mobile First */
+@media (min-width: 820px) {
+    main {
+        background-color: #fff;   /* 🔹 Fondo blanco */
+        color: #111;              /* Texto oscuro */
+        text-align: justify;      /* Mejor lectura */
+        padding: 2rem;            /* Espaciado cómodo */
+        width: 80%;               /* Centrado en pantallas medianas */
+        border-radius: 20px;      /* Bordes suaves */
+        margin: 0 auto;           /* 🔹 Centrado horizontal */
+        font-size: 1rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+}
+
+@media (min-width: 1220px) {
+    main {
+        width: 60%;               /* Más estrecho en pantallas grandes */
+        background-color: #fff;   /* Aseguramos fondo blanco */
+        border: none;             /* Sin borde de prueba */
+        margin: 0 auto;           /* Centrado */
+    }
+}
+
+footer {
+    background-color: #111;  /* fondo oscuro */
+    color: #fff;             /* texto claro */
+    text-align: center;      /* centrado */
+    padding: 0.6rem 0;       /* más fino en mobile */
+    width: 100%;             /* ocupa todo el ancho */
+    margin-top: auto;        /* empuja hacia abajo */
+    font-size: 0.9rem;
+    border-radius: 0;        /* sin bordes redondeados */
+    position: relative;      /* posición normal */
+}
+
+/* CSS Grid */
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+    grid-template-rows: auto 1fr auto auto;
+    width: 100%;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+/* Asignar área */
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* --- Vista de escritorio (más de 820px) --- */
+@media (min-width: 820px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+    }
+
+    .container {
+        grid-template-areas:
+            "header header"
+            "main aside"
+            "footer footer";
+        grid-template-columns: 2fr 1fr;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto; /* 🔹 Centra todo el layout */
+        gap: 20px;
+        align-items: start; /* 🔹 Alinea main y aside arriba */
+    }
+
+    main,
+    aside {
+        height: 100%; /* 🔹 Misma altura visual */
+    }
+
+    main {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+
+    aside {
+        width: 100%;
+        align-self: stretch; /* 🔹 Se estira para igualar altura con main */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
