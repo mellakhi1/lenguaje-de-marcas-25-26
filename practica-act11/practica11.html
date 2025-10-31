@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de David | Mundo Gamer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #1e1e2f;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        main {
+            display: flex;
+            flex: 1;
+            max-width: 1200px;
+            margin: 30px auto;
+            gap: 20px;
+            padding: 0 15px;
+        }
+        article {
+            flex: 3;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        article h2 {
+            color: #1e1e2f;
+            margin-bottom: 10px;
+        }
+        article img {
+            width: 30em;
+            height: 30rem;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        article p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        aside {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+        aside h3 {
+            margin-bottom: 15px;
+            color: #1e1e2f;
+        }
+        aside ul {
+            list-style: none;
+        }
+        aside li {
+            margin-bottom: 10px;
+        }
+        aside a {
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+        aside a:hover {
+            color: #ffcc00;
+        }
+        footer {
+            text-align: center;
+            background-color: #1e1e2f;
+            color: #fff;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Blog de David | Mundo Gamer</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Análisis</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenido principal -->
+        <article>
+            <h2>SEAT Ibiza 1.0 TSI 2017 </h2>
+            <img src="SEAT.jpeg" alt="SEAT IBIZA">
+            <p><strong>Publicado el 31 de octubre de 2025</strong></p>
+            <p>
+                Mi primer coche, me hizo mucha ilusión ya que estuve ahorrando minetras trabaja, estudiaba y me sacaba el carnet, fue un gran avance para mí, y aproveche el mismo verano en que me lo compre para recorrer toda la costa de Andalucía, fue una experiencia increíble, ahora mismo esta reparandose en el taller por un accidente que tuve en enero... así que lo echo mucho de menos.
+            </p>
+            <p>
+                Aun así, en cuanto lo vuelva a tener en mis manos, le hare un mantenimiento exhaustivo y en cuanto este listo, haré un viaje de larga distancia.
+            </p>
+
+            <h2>HONDA PCX 125 2025</h2>
+            <img src="PCX.JPG" alt="HONDA PCX">
+            <p>
+                Mi segunda moto, pero la oficial, antes de esta tenía una SYM pero no respondió como debía, así que pegue el cambio a HONDA, con esta llevo apenas 2 meses, pero estoy muy contento con ella, me ayuda mucho a llegar al aeropuerto para trabajar, ir al centro a estudiar, y a ahorrarme horas de trafico interminable... 
+            </p>
+
+            <h2>WOLKSWAGEN GOLF R8</h2>
+            <img src="r8.jpg" alt="WOLKSWAGEN R8">
+            <p>
+                El Golf R exhibe de forma extraordinaria su carácter deportivo. Su tubo de escape con cuatro salidas cromadas, junto con la rejilla de ventilación y el splitter frontal en Negro de Alto Brillo crean una imagen única y atractiva, que destaca aún más en la versión Black Edition. Opcionalmente, también es posible añadir un sistema de escape en titanio, del prestigioso fabricante Akrapovic.
+            </p>
+        </article>
+
+        <!-- Barra lateral -->
+        <aside>
+            <h3>Sobre mí</h3>
+            <p>👋 Soy David, apasionado de los videojuegos y de todo lo que rodea la cultura gamer. En este blog
+                comparto reseñas, análisis y curiosidades del mundo gaming.</p>
+
+            <h3>Últimas entradas</h3>
+            <ul>
+                <li><a href="#">Top 5 juegos indie de 2025</a></li>
+                <li><a href="#">Por qué Elden Ring sigue siendo el rey</a></li>
+                <li><a href="#">Mis expectativas para la PS6</a></li>
+            </ul>
+
+            <h3>Sígueme</h3>
+            <ul>
+                <li><a href="#">🐦 Twitter</a></li>
+                <li><a href="#">📸 Instagram</a></li>
+                <li><a href="#">🎮 Twitch</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blog de David. Todos los derechos reservados.</p>
+        <p>(Tengo que ajustar las imagenes o buscar otras!!)</p>
+    </footer>
+</body>
+
+</html>
